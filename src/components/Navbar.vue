@@ -22,8 +22,7 @@
           :to="each.to"
           :key="each.to"
           class="navbar-item"
-          >{{ each.text }}</router-link
-        >
+        >{{ each.text }}</router-link>
         <!-- <router-link to="/" class="navbar-item">Home</router-link>
         <router-link to="/about" class="navbar-item">About</router-link>
         <router-link to="/contact" class="navbar-item">Contact</router-link>
@@ -76,6 +75,13 @@ export default {
         {
           to: "/users",
           text: "Users"
+        },
+        {
+          to: "/search",
+          text: "Search"
+        },{
+          to: "/props",
+          text: "Props"
         }
       ]
     };

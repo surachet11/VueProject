@@ -52,14 +52,22 @@ export default {
   methods: {
     async getUser() {
       const res = await axios.get("https://jsonplaceholder.typicode.com/users");
-      this.users = res.data;
+      // this.users = res.data;
+      this.upDateUsers(res.data);
 
       /* eslint-disable no-console */
       console.log("Test");
       /* eslint-enable no-console */
+    },
+    upDateUsers(data) {
+      this.$store.commit("upDateUsers", data);
     }
   },
+
   computed: {
+    users() {
+      return this.$store.state.users;
+    },
     filterUser() {
       const pattern = new RegExp(this.query, "i");
       return this.users.filter(each => {
@@ -73,7 +81,6 @@ export default {
 
   data() {
     return {
-      users: [],
       query: ""
     };
   }

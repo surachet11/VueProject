@@ -5,6 +5,8 @@ import Form from "./views/Form.vue";
 import Photo from "./views/Photo.vue";
 import User from "./views/User.vue";
 import UserProfile from "./views/UserProfile.vue";
+import Search from "./views/Search.vue";
+import Props from "./views/Props.vue";
 
 import VueRouter from "vue-router";
 
@@ -36,6 +38,14 @@ const routes = [
   {
     path: "/users/:id",
     component: UserProfile
+  },
+  {
+    path: "/search",
+    component: Search
+  },
+  {
+    path: "/props",
+    component: Props
   }
 ];
 
